@@ -1,9 +1,9 @@
 {
-  "name": "cosmetic",
+  "name": "api_cosmetic",
   "version": "1.0.0",
-  "description": "cosmetic",
+  "description": "",
   "main": "index.js",
-  "engine":{
+  "engine": {
     "node": ">=14.20.1"
   },
   "dependencies": {
@@ -21,7 +21,7 @@
     "debug": "^2.6.9",
     "depd": "^2.0.0",
     "destroy": "^1.2.0",
-    "dotenv": "^16.1.0",
+    "dotenv": "^16.3.1",
     "ee-first": "^1.1.1",
     "encodeurl": "^1.0.2",
     "escape-html": "^1.0.3",
@@ -55,6 +55,7 @@
     "mquery": "^5.0.0",
     "ms": "^2.0.0",
     "negotiator": "^0.6.3",
+    "nodemon": "^2.0.22",
     "object-assign": "^4.1.1",
     "object-inspect": "^1.12.3",
     "on-finished": "^2.4.1",
@@ -86,13 +87,10 @@
     "webidl-conversions": "^7.0.0",
     "whatwg-url": "^11.0.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "cosmetic"
-  ],
-  "author": "julian carreño",
+  "keywords": [],
+  "author": "",
   "license": "ISC"
 }
