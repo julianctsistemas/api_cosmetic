@@ -57,9 +57,9 @@ const ProductoSchema = Schema({
         required: [true, 'El precio costo es requerido'],
         validate: {
             validator: function(value) {
-                return /^\d+$/.test(value);
+                return /^\d+(\.\d+)?$/.test(value);
             },
-            message: 'El precio costo  debe contener solo números'
+            message: 'El precio costo debe contener solo números o números con decimales'
         }
     },
     precioVenta: {
@@ -67,11 +67,12 @@ const ProductoSchema = Schema({
         required: [true, 'El precio venta es requerido'],
         validate: {
             validator: function(value) {
-                return /^\d+$/.test(value);
+                return /^\d+(\.\d+)?$/.test(value);
             },
-            message: 'El precio venta  debe contener solo números'
+            message: 'El precio venta debe contener solo números o números con decimales'
         }
     },
+    
     ganancia: {
         type: Number,
         
@@ -92,13 +93,14 @@ const ProductoSchema = Schema({
         const precioCosto = this.precioCosto;
         const precioVenta = this.precioVenta;
       
-        if (precioCosto && precioVenta) {
-          const ganancia = precioVenta - precioCosto;
-          this.ganancia = ganancia;
+        if (precioCosto !== undefined && precioVenta !== undefined) {
+            const ganancia = precioVenta - precioCosto;
+            this.ganancia = ganancia.toFixed(2); // Limitar la ganancia a 2 decimales
         }
       
         next();
-      });
+    });
+    
 //este es el nombre del objeto Ambiente
 module.exports = model('Producto', ProductoSchema)//Exportar el modelo
 
