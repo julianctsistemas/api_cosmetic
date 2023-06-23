@@ -16,8 +16,8 @@ class Server {
         this.app.use(bodyParser.urlencoded({extended:true}))
         this.app.use(cors({
             origin:[
-            'https://localhost:8081',
-            'https://localhost:8081'
+            'http://localhost:8081',
+            'http://localhost:8081'
             ]
         }));
         this.middlewares()//ayudas extras enlaces o puentes
