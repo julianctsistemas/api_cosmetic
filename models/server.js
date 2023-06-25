@@ -14,12 +14,12 @@ class Server {
         this.empleadoPath = '/api/empleado'//ruta publica
         this.categoriaProductoPath = '/api/categoriaProducto'//ruta publica
         this.app.use(bodyParser.urlencoded({extended:true}))
-        this.app.use(cors({
+        this.app.use(cors(/*{
             origin:[
             'http://localhost:8081',
             'http://localhost:8081'
             ]
-        }));
+        }*/));
         this.middlewares()//ayudas extras enlaces o puentes
         this.routes()//las rutas
         this.conectarDB()//conectarse a la base de datos
