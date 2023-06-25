@@ -55,8 +55,8 @@ const EmpleadoSchema = Schema({
         required: [true, 'El estado es requerido']
     },
     observacion: {
-        type: String,
-        required: [true, 'La observación es requerida']
+        type: String
+        
     }
 });
 

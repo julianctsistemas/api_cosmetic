@@ -32,7 +32,7 @@ const ProductoSchema = Schema({
     },
     stockMaximo: {
         type: Number,
-        max: [30, 'El valor maximo del stock es de 30'],       
+        max: [500, 'El valor maximo del stock es de 500'],       
         required: [true, 'El stock maximo es requerido'],
         validate: {
             validator: function(value) {
@@ -78,8 +78,7 @@ const ProductoSchema = Schema({
         
     },
     observacion: {
-        type: String,
-        required: [true, 'La cobservacion es requerida']
+        type: String
     },
     estado: {
         type: String,
